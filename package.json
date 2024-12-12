@@ -1,0 +1,16 @@
+{
+  "name": "DRDOEx",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+    "start:frontend": "cd frontend && npm start",
+    "start:backend": "cd backend/fastapi-backend && uvicorn main:app --reload",
+    "build": "cd frontend && npm run build",
+    "test": "cd frontend && npm test",
+    "eject": "cd frontend && npm run eject"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
